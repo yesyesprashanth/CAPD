@@ -1,0 +1,21 @@
+.container{
+    background-color: #DFD0F5;
+    
+    width:300px;
+    height: 350px;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.heading{
+    font-family: sans-serif;
+    font-size: 25px;
+    color:#4D3EDE;
+    margin-top: 20px;
+}
+
+.loginForm{
+    margin-top: 30px;
+}
