@@ -6,13 +6,18 @@ import styles from './LoginForm.module.css';
 export default function LoginForm(){
     const [clientId, setClientId] = useState("");
     const [password, setPassword] = useState("");
+    const [learnInput, setLearnInput] = useState("")
 
-    function handleClientIdChange(){
+    function handleClientIdChange(e){
         setClientId(e.target.value);
     }
 
-    function handlePasswordChange(){
-        setClientId(e.target.value);
+    function handlePasswordChange(e){
+        setPassword(e.target.value);
+    }
+
+    function handleInputChange(e){
+        setLearnInput(e.target.value);
     }
 
     return(
@@ -22,13 +27,13 @@ export default function LoginForm(){
                     label = "ClientId"
                     name = "clientId"
                     value = {clientId}
-                    onChange={e=>handleClientIdChange}
+                    onChange={handleClientIdChange}
                 />
                 <LabelTextInput 
                     label = "Password"
                     name = "password"
-                    value = {clientId}
-                    onChange={e=>handlePasswordChange}
+                    value = {password}
+                    onChange={handlePasswordChange}
                 />
             </div>
             <button className={styles.button}>Login</button>
