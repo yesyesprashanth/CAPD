@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './LabelTextInput.module.css'
+import styles from './LabelTextInput.module.css';
+import {useForm} from 'react-hook-form'
 
 export default function LabelTextInput({label, name, value, onChange}){
     return(
@@ -11,7 +12,8 @@ export default function LabelTextInput({label, name, value, onChange}){
                 id = {name}
                 name = {name} 
                 value = {value} 
-                onChange={onChange}/> 
+                onChange={onChange}                                  
+                />                                  
         </div>
     )
 }

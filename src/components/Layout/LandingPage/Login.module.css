@@ -2,11 +2,13 @@
     background-color: #DFD0F5;
     
     width:300px;
-    height: 350px;
+    min-height: 350px;
     border-radius: 30px;
+    padding:10px;
 
     display: flex;
     flex-direction: column;
+
 }
 
 .heading{
