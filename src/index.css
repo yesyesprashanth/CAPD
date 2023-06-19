@@ -12,6 +12,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --button-color: #ACA8EE;
+  --text-color: #4D3EDE;
 }
 
 a {
@@ -25,6 +28,7 @@ a:hover {
 
 body {
   margin: 0;
+  padding:0;
   display: flex;
   place-items: center;
   min-width: 320px;

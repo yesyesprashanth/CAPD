@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
+import Layout from '../components/Layout/HomePage/Layout';
 
 export default function Homepage(){
+    
     useEffect(()=>{
         function CheckLoginCred(){
             const data = localStorage.getItem("loginCred");
@@ -12,7 +14,8 @@ export default function Homepage(){
 
         CheckLoginCred();
     }, [])
+
     return(
-        <div>Home page</div>
+        <Layout />
     )
 }

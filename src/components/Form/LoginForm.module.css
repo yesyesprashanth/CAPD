@@ -6,6 +6,6 @@
 }
 
 .button{    
-    background-color: #ACA8EE;
+    background-color: var(--button-color);
     width:80px;
 }

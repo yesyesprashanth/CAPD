@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-import LabelTextInput from './LabelTextInput';
 import styles from './LoginForm.module.css';
 import Textstyles from './LabelTextInput.module.css';
 
@@ -67,25 +66,6 @@ export default function LoginForm(){
                         /> 
                         {errors.password && <p>Password is required</p>}
                     </div>                                          
-                    
-                    {/* <LabelTextInput 
-                    label="Client Id"
-                    name={clientId}
-                    value={clientId}
-                    onChange={handleClientIdChange} 
-                    {...register("clientId", {required:true})}                        
-                    />  
-                    {errors.clientId && <p>Client ID is required</p>}  
-
-                    <LabelTextInput 
-                    label="Password"
-                    name={password}
-                    value={password}
-                    onChange={handlePasswordChange} 
-                    {...register("password", {required:true})}  
-                    />
-                    {errors.password && <p>Password is required</p>} */}
-
                 </div>
                 <button type="submit" className={styles.button}>Login</button>
             </div>
