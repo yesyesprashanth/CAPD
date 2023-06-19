@@ -7,7 +7,7 @@ export default function Layout(){
         <>
             <div className={styles.layout}>
                 <Navbar />
-                CAPD Homepage
+                CAPD homepage
             </div>
         </>
     )

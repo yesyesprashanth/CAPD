@@ -5,9 +5,10 @@ import {useNavigate} from 'react-router-dom';
 export default function Navbar(){
     const navigiate = useNavigate();
     function handleClick(){
-        navigiate('/homepage')
+        const path = '/homepage'
+        navigiate(path)
     }
-    return(
+    return( 
         <>
             <div className = {styles.container}>
                 <div className={styles.nav}>
