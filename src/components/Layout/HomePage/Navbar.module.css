@@ -31,5 +31,10 @@
     color: var(--text-color);
     border:none;
     outline:none;
+    padding:8px 20px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1p rgb(0,0,0.5);
+    background-color: #FFFF;
+    cursor: pointer;
 }
 

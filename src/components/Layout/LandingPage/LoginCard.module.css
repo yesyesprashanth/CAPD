@@ -7,8 +7,7 @@
     padding:10px;
 
     display: flex;
-    flex-direction: column;
-
+    flex-direction: column;    
 }
 
 .heading{
@@ -16,6 +15,9 @@
     font-size: 25px;
     color:#4D3EDE;
     margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
 }
 
 .loginForm{

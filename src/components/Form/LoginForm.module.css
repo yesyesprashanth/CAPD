@@ -7,5 +7,8 @@
 
 .button{    
     background-color: var(--button-color);
-    width:80px;
+    padding: 8px 25px;
+    outline: none;
+    border: none;
+    border-radius: 8px;    
 }

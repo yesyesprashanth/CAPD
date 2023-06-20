@@ -1,0 +1,19 @@
+.container{
+    background-color: var(--button-color);
+    width: 320px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    color:var(--text-color)
+}
+
+@media (width<400){
+    .container{
+        width: 260px;
+        height: 120px;
+    }
+}
+

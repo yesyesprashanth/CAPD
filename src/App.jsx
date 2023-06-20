@@ -1,6 +1,6 @@
-import './App.css'
 import Homepage from './Pages/HomePage';
 import LandingPage from './Pages/LandingPage';
+import TestPage from './Pages/TestPage';
 import PageNotFound from './Pages/PageNotFound';
 import Layout from './components/Layout/LandingPage/Layout';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
@@ -16,6 +16,11 @@ function App() {
       element:<Homepage />,
       errorElement:<PageNotFound />,      
     },
+    {
+      path:"/testpage",
+      element: <TestPage />,
+      errorElement:<PageNotFound />
+    }
   ])
 
   return (
