@@ -6,9 +6,10 @@
 }
 
 .button{    
-    background-color: var(--button-color);
+    background-color: var(--text-color-white);
     padding: 8px 25px;
     outline: none;
-    border: none;
+    border: none;    
     border-radius: 8px;    
+    cursor:pointer;
 }

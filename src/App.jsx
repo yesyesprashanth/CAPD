@@ -17,7 +17,12 @@ function App() {
       errorElement:<PageNotFound />,      
     },
     {
-      path:"/testpage",
+      path:"/homepage/Auditory",
+      element:<TestPage />,
+      errorElement:<PageNotFound />,      
+    },
+    {
+      path:"/jamesbond",
       element: <TestPage />,
       errorElement:<PageNotFound />
     }

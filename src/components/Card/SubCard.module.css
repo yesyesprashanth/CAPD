@@ -1,21 +1,22 @@
 .container{
     background-color: var(--button-color);
-    width: 320px;
-    height: 150px;
+    width: 160px;
+    height: 80px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
     color:var(--text-color-white);
-    font-size: 24px;
+    
     box-shadow: 3px 3px 10px rgba(0,0,0, 0.6);
 }
 
-@media (width<400){
-    .container{
-        width: 260px;
-        height: 120px;
-    }
+.heading{
+    font-size: 18px;
 }
 
+.subheading{
+    font-size: 14px;
+}

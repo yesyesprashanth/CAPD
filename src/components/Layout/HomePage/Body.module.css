@@ -1,4 +1,12 @@
 .container{
+    width: 100%;        
+    display:flex;  
+    justify-content: center;   
+    align-items: center;
+}
+
+
+.moduelContainer{
     width: 100%;    
     
     display:flex;    
@@ -6,6 +14,19 @@
     align-items: center;
     justify-content: center;
     gap:60px;
+
+    cursor: pointer;
+}
+
+.chaptersContainer{
+    max-width: 600px;
+    
+    display:flex;    
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
 
     cursor: pointer;
 }
