@@ -4,10 +4,10 @@ export default function MainCard({cardname, handleClick}){
 
  
     return(
-        <div className = {styles.container} onClick={handleClick}>
-            <div>
-                {cardname}
-            </div>
+        <>
+        <div className = {styles.container} id = {cardname} onClick={handleClick}>            
+            {cardname}            
         </div>
+        </>
     )
 }
