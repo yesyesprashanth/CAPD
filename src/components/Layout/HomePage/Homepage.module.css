@@ -3,30 +3,41 @@
     display:flex;  
     justify-content: center;   
     align-items: center;
+
+}
+
+.backButton{
+    background-color: var(--button-color);
+    color: var(--text-color-white);
+    font-size: 18px;
+    padding: 8px 20px;
+    border-radius: 8px;
+    border:none;
+    outline:none;
+
+    position:absolute;
+    top:66px;
+    cursor: pointer;
 }
 
 
 .moduelContainer{
-    width: 100%;    
-    
+    width: 100%;        
     display:flex;    
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap:60px;
-
     cursor: pointer;
 }
 
 .chaptersContainer{
-    max-width: 600px;
-    
+    max-width: 600px;    
     display:flex;    
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap:30px;
-
     cursor: pointer;
 }

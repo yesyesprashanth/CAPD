@@ -4,6 +4,7 @@ import TestPage from './Pages/TestPage';
 import PageNotFound from './Pages/PageNotFound';
 import Layout from './components/Layout/LandingPage/Layout';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import InstructionPage from './Pages/InstructionPage';
 function App() {
   const router = createBrowserRouter([
     {
@@ -17,7 +18,12 @@ function App() {
       errorElement:<PageNotFound />,      
     },
     {
-      path:"/homepage/Auditory",
+      path:"/instruction",
+      element:<InstructionPage />,
+      errorElement:<PageNotFound />,      
+    },
+    {
+      path:"/Auditory",
       element:<TestPage />,
       errorElement:<PageNotFound />,      
     },

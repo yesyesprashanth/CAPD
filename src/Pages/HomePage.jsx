@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout/HomePage/Layout';
-import Body from '../components/Layout/HomePage/Body';
+import HomeComponent from '../components/Layout/HomePage/Homepage';
 
 export default function Homepage(){
     
@@ -13,7 +13,7 @@ export default function Homepage(){
 
     return(
         <Layout>
-            <Body />
+            <HomeComponent />
         </Layout>
     )
 }

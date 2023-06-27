@@ -1,7 +1,3 @@
-export const Modules = ["Auditory", "Cognitive"];
-
-export const Auditory = ["Auditory Analysis", "Auditory Attention", "Auditory Association", "Auditory Closure", "Audiotry Discrimination", "Temporal Patterning", "Auditory synthesis", "Auditory Figure Ground"];
-
 const moduleList = [
     {
         "title" : "Auditory",  
@@ -22,30 +18,44 @@ const moduleList = [
                     {
                         "title" : "1.3 Syllable number",
                         "subTitle" : "",
-                        "items" : []
+                        "items" : [
+                            {
+                                "title": "1.3.1 Initial",
+                                "subTitle": "",
+                                "items":[]
+                            },
+                            {
+                                "title": "1.3.2 Medial",
+                                "subTitle": "",
+                                "items":[]
+                            },
+                            {
+                                "title": "1.3.3 Final",
+                                "subTitle": "",
+                                "items":[]
+                            },
+                        ]
                     }, 
                     {
                         "title" : "1.4 Syllable recognitiopn",
                         "subTitle" : "",
                         "items" : [
                             {
-                                "title": "1.3.2 Initial",                                 
-                                "subTitle": ""
+                                "title": "Familiar",                                 
+                                "subTitle": "",
+                                "items":[]
                             },
                             {
-                                "title": "1.3.2 Medial",                                 
-                                "subTitle": ""
-                            },
-                            {
-                                "title": "1.3.3 Final",
-                                "subTitle": ""
+                                "title": "Unfamiliar",                                 
+                                "subTitle": "",
+                                "items":[]
                             }
                         ]
                     }, 
                     {
                         "title" : "1.5 Single step command",
                         "subTitle" : "",
-                        "items" : ["Familiar", "Unfamiliar"]
+                        "items" : []
                     },
                 ]
             },
@@ -53,29 +63,101 @@ const moduleList = [
                 "title": "Auditory Attention",
                 "items" : [
                     {
-                        "title" : "1.1 vowels",
-                        "subTitle" : "hunt the vowels",
+                        "title" : "2.1 Single step commands",
+                        "subTitle" : "",
                         "items" : []
-                    }
+                    },
+                    {
+                        "title" : "2.2 2-step commands",
+                        "subTitle" : "",
+                        "items" : []
+                    },
+                    {
+                        "title" : "2.3 3-step commands",
+                        "subTitle" : "",
+                        "items" : []
+                    },
+                    {
+                        "title" : "2.4 story comprehension",
+                        "subTitle" : "",
+                        "items" : []
+                    },
                 ]
             },
             {
                 "title": "Auditory Association",
                 "items" : [
                     {
-                        "title" : "1.1 vowels",
-                        "subTitle" : "hunt the vowels",
+                        "title" : "3.1 vowels",
+                        "subTitle" : "",
                         "items" : []
-                    }
+                    },
+                    {
+                        "title" : "3.2 consonants",
+                        "subTitle" : "",
+                        "items" : []
+                    },
+                    {
+                        "title" : "3.3 syllables",
+                        "subTitle" : "",
+                        "items" : []
+                    },
+                    {
+                        "title" : "3.4 words",
+                        "subTitle" : "",
+                        "items" : []
+                    },
+                    {
+                        "title" : "3.5 sentences",
+                        "subTitle" : "",
+                        "items" : []
+                    },
                 ]
             },
             {
                 "title": "Auditory Closure",
                 "items" : [
                     {
-                        "title" : "1.1 vowels",
-                        "subTitle" : "hunt the vowels",
-                        "items" : []
+                        "title" : "4.1 Missing words",
+                        "subTitle" : "",
+                        "items" : [
+                            {
+                                "title": "4.1.1 Initial",
+                                "subtitle": "",
+                                "items": []
+                            },
+                            {
+                                "title": "4.1.2 medial",
+                                "subtitle": "",
+                                "items": []
+                            },
+                            {
+                                "title": "4.1.3 Final",
+                                "subtitle": "",
+                                "items": []
+                            },
+                        ]
+                    },
+                    {
+                        "title": "4.2 Missing Syllable",
+                        "subTitle": "",
+                        "items": [
+                            {
+                                "title": "4.2.1 Initial",
+                                "subTitle": "",
+                                "items": []
+                            },
+                            {
+                                "title": "4.2.2 Medial",
+                                "subTitle": "",
+                                "items": []
+                            },
+                            {
+                                "title": "4.2.3 Final",
+                                "subTitle": "",
+                                "items": []
+                            },
+                        ]
                     }
                 ]
             },
@@ -83,38 +165,147 @@ const moduleList = [
                 "title": "Auditory Discrimination",
                 "items" : [
                     {
-                        "title" : "1.1 vowels",
-                        "subTitle" : "hunt the vowels",
+                        "title" : "5.1 Vowels",
+                        "subTitle" : "",
                         "items" : []
-                    }
+                    },
+                    {
+                        "title" : "5.2 Consonants",
+                        "subTitle" : "",
+                        "items" : [
+                            {
+                                "title": "5.2.1 Easy",
+                                "subTitle":"",
+                                "items":[]
+                            },
+                            {
+                                "title": "5.2.2 Difficult",
+                                "subTitle":"",
+                                "items":[]
+                            },
+                        ]
+                    },
+                    {
+                        "title" : "5.3 Clusters",
+                        "subTitle" : "",
+                        "items" : []
+                    },
+                    {
+                        "title" : "5.4 Phrases",
+                        "subTitle" : "",
+                        "items" : []
+                    },
                 ]
             },
             {
                 "title": "Temporal Patterning",
                 "items" : [
                     {
-                        "title" : "1.1 vowels",
-                        "subTitle" : "hunt the vowels",
+                        "title" : "6.1 Auditory Pattern",
+                        "subTitle" : "",
                         "items" : []
-                    }
+                    },
+                    {
+                        "title" : "6.2 Humming",
+                        "subTitle" : "",
+                        "items" : []
+                    },
+                    {
+                        "title" : "6.3 Pattern Completion",
+                        "subTitle" : "",
+                        "items" : []
+                    },
+                    {
+                        "title" : "6.4 Vowels",
+                        "subTitle" : "",
+                        "items" : []
+                    },
+                    {
+                        "title" : "6.5 Consonants",
+                        "subTitle" : "",
+                        "items" : []
+                    },
+                    {
+                        "title" : "6.6 Clusters",
+                        "subTitle" : "",
+                        "items" : []
+                    },
                 ]
             },
             {
                 "title": "Auditory Synthesis",
                 "items" : [
                     {
-                        "title" : "1.1 vowels",
-                        "subTitle" : "hunt the vowels",
+                        "title" : "7.1 Compound Words",
+                        "subTitle" : "",
                         "items" : []
-                    }
+                    },
+                    {
+                        "title" : "7.2 Word",
+                        "subTitle" : "",
+                        "items" : [
+                            {
+                                "title": "7.2.1 Familiar",
+                                "subTitle": "",
+                                "items":[]
+                            },
+                            {
+                                "title": "7.2.2 Unfamiliar",
+                                "subTitle": "",
+                                "items":[]
+                            }
+                        ]
+                    },
+                    {
+                        "title" : "7.3 Phrases",
+                        "subTitle" : "",
+                        "items" : [
+                            {
+                                "title": "7.3.1 Familiar",
+                                "subTitle": "",
+                                "items":[]
+                            },
+                            {
+                                "title": "7.3.2 Unfamiliar",
+                                "subTitle": "",
+                                "items":[]
+                            }
+                        ]
+                    },
+                    {
+                        "title" : "7.4 Sentences",
+                        "subTitle" : "",
+                        "items" : [
+                            {
+                                "title": "7.4.1 Familiar",
+                                "subTitle": "",
+                                "items":[]
+                            },
+                            {
+                                "title": "7.4.2 Unfamiliar",
+                                "subTitle": "",
+                                "items":[]
+                            }
+                        ]
+                    },
+                    {
+                        "title" : "7.5 Riddles",
+                        "subTitle" : "",
+                        "items" : []
+                    },
                 ]
             },
             {
                 "title": "Auditory figure ground",
                 "items" : [
                     {
-                        "title" : "1.1 vowels",
-                        "subTitle" : "hunt the vowels",
+                        "title" : "8.1 Following direction",
+                        "subTitle" : "",
+                        "items" : []
+                    },
+                    {
+                        "title" : "8.2 Stories",
+                        "subTitle" : "",
                         "items" : []
                     }
                 ]
@@ -144,17 +335,8 @@ export function getModuleList(){
     return moduleList.map(module=>module.title);
 }
 
-export function getChapterList(moduleName){
-    return moduleList.find(module=>module.title === moduleName)
-}
-
-
-export function getObject(moduleName, chapterName, subChapterName){
-
-    console.log(moduleName, chapterName, subChapterName);
-
-    //Get Chapter list
-    if(chapterName===""){ 
+export function getObject(moduleName, chapterName, subChapterName){  
+    if(chapterName===""){    //Get Chapter list
         return moduleList.find(module=>module.title === moduleName)
     }else{
         if(subChapterName==="") //Get Sub Chapter Names
@@ -164,25 +346,11 @@ export function getObject(moduleName, chapterName, subChapterName){
         }else // get Level list
         {
             const chapterList =  moduleList.find(module=>module.title === moduleName);            
-            const subChapterList =  chapterList.items.find(item => item.title === chapterName);  
-            console.log(subChapterList);
+            const subChapterList =  chapterList.items.find(item => item.title === chapterName);             
             return  subChapterList.items.find(item => item.title === subChapterName); 
-        }
+        }     
     }
 }
 
-// function getList(module, chapter, title){
-
-//     const moduleRes = moduleList.find(module => module.name === module);
-//     const chapterRes = moduleRes.chapters.find(chapter => chapter.name === chapter);
-//     const subChapterRes = chapterRes.subChapter.find(subChapter => subChapter.title === title);
-    
-//     return subChapterRes;
-// }
-
-
-
-
-export const Cognitive = ["Listening Span", "Reading Span"];
 
 
