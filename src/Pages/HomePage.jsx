@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout/HomePage/Layout';
-import HomeComponent from '../components/Layout/HomePage/Homepage';
+import HomeComponent from '../components/Layout/ClientHome/Homepage'
 
 export default function Homepage(){
     

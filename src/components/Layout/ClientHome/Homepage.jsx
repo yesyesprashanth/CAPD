@@ -88,24 +88,28 @@ export default function Homepage(){
     
     return(
         <div className = {styles.container}>
-            <button className={styles.backButton} onClick={handleBack}>Back</button>
-            {
-            level===0?(
-                <div className = {styles.moduelContainer}>
+            <div className={styles.buttonContainer}>
+                <button className={styles.backButton} onClick={handleBack}>Back</button>
+            </div>
+            <div className={styles.cardContainer}>
                 {
-                    CardList.map((card)=>{                     
-                        return <MainCard key = {card} cardname = {card} handleClick = {handleCardClick} />
-                    })
-                }            
-                </div>):(
-                <div className={styles.chaptersContainer}>
-                {                        
-                    subCardList.map(card=>{
-                       return <SubCard heading={card.title} key = {card.title}  subheading={card.subTitle} handleClick = {handleSubCardClick}/>
-                    }) 
+                level===0?(
+                    <div className = {styles.moduelContainer}>
+                    {
+                        CardList.map((card)=>{                     
+                            return <MainCard key = {card} cardname = {card} handleClick = {handleCardClick} />
+                        })
+                    }            
+                    </div>):(
+                    <div className={styles.chaptersContainer}>
+                    {                        
+                        subCardList.map(card=>{
+                        return <SubCard heading={card.title} key = {card.title}  subheading={card.subTitle} handleClick = {handleSubCardClick}/>
+                        }) 
+                    }
+                    </div>)
                 }
-                </div>)
-            }
+            </div>
         </div>
     )
 }
