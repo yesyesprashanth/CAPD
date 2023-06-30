@@ -4,7 +4,7 @@ export default function SubCard({heading, subheading, handleClick}){
             <div className = {styles.container} id = {heading} onClick={handleClick}>
                 <div className = {styles.heading} id = {heading}>{heading}</div>
                 {
-                    subheading!==""?(<div className = {styles.subheading} id = {heading}>{subheading}</div>):null
+                    subheading!==""?(<div className = {styles.subheading} id = {heading} >{subheading}</div>):null
                 }
             </div>       
     )

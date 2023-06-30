@@ -1,9 +1,11 @@
-import MainCard from "../components/Card/MainCard";
+import Layout from "../components/Layout/HomePage/Layout";
+import TestScreen1 from "../components/Testpage/TestScreen1";
+
 
 export default function TestPage(){
     return(
-        <>
-            <MainCard cardname={"Prashanth"} />
-        </>
+        <Layout>
+            <TestScreen1 />
+        </Layout>
     )
 }

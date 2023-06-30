@@ -3,9 +3,8 @@
     display:flex;      
     flex-direction: column;
     align-items: center;    
-
-    
     height: 100%;   
+    margin-block: 20px;
 }
 .buttonContainer{
     width:100%;  
@@ -30,7 +29,7 @@
 .cardContainer{    
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: auto;
     padding:10px;
     display: flex;
     justify-content: center;

@@ -10,6 +10,7 @@ function App() {
     {
       path:"/",
       element: <LandingPage />,
+      // element : <TestPage />,
       errorElement:<PageNotFound />
     },
     {
@@ -23,7 +24,7 @@ function App() {
       errorElement:<PageNotFound />,      
     },
     {
-      path:"/Auditory",
+      path:"/auditory-testpage",
       element:<TestPage />,
       errorElement:<PageNotFound />,      
     },
