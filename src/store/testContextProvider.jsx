@@ -6,13 +6,15 @@ const TestContext = createContext(null);
 export function TestContextProvider({children}){
     const [testCode, setTestCode] = useState(1);
     const [instruction, setInstruction] = useState("");
+    const [example, setExample] = useState("");
 
     const contextData = {
         "testCode": testCode,
         "updateTesCode": setTestCode,
         "instruction": instruction,
         "updateInstruction": setInstruction,
-        "name":"context"
+        "example": example,
+        "updateExample" : setExample
     }
 
     return(

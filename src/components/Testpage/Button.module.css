@@ -10,4 +10,6 @@ button{
     border: none;
     outline:none;
     letter-spacing: 1px;
+    min-width: 120px;
+    cursor: pointer;
 }

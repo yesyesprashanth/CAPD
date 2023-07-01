@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './TestScreen1.module.css'
 import Button from './Button';
 import audioIcon from '../../assets/Audio_Icon.png'
@@ -15,6 +16,7 @@ export default function TestScreen1(){
         name2: "Wrong",
         color2: "#730D0D"
     })
+    const navigate = useNavigate();
     
     const buttonDataList = [
         {
@@ -66,7 +68,7 @@ export default function TestScreen1(){
             break;
             case 3:         
                 return(
-                    <div>
+                    <div className={styles.imageList}>
                         <img src = {lion} alt="image1" />
                         <img src = {parrot} alt="image2" />
                         <img src = {butterfly} alt="image3" />
@@ -75,7 +77,7 @@ export default function TestScreen1(){
             break;
             case 4:           
             return(
-                    <div>
+                    <div className={styles.buttonList}>
                         <button>4</button>
                         <button>2</button>
                         <button>0</button>
@@ -85,6 +87,11 @@ export default function TestScreen1(){
                 )   
             break;
         }        
+    }
+
+
+    function exit(){
+        navigate('/homepage');
     }
 
 
@@ -102,7 +109,7 @@ export default function TestScreen1(){
             </div>
             <div className={styles.commonButtons}>
                 <Button id="repeat" name = "Repeat" bgColor="#ACA8EE" />
-                <Button id="exit" name = "Exit" bgColor="#ACA8EE" />                
+                <Button id="exit" name = "Exit" bgColor="#ACA8EE" handleClick = {exit} />                
             </div>            
         </div>
     )

@@ -53,5 +53,7 @@
     align-items: center;
     justify-content: center;
     gap:30px;
+    margin-block: 40px;
     cursor: pointer;
+    
 }

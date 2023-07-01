@@ -10,87 +10,80 @@ export default function Homepage(){
     const [module, setModule] = useState("");
     const [chapter, setChapter] = useState("");
     const [subChapter, setSubChapter] = useState("");
-    const [level, setLevel] = useState(0);
+    const [level, setLevel] = useState(0);    
     const [subCardList, setSubCardList] = useState([]);
-    const {updateInstruction, updateTesCode} = useContext(TestContext);
+    const {updateInstruction, updateTesCode, updateExample} = useContext(TestContext);
 
     const navigate = useNavigate();
 
-    const CardList = getModuleList();     
-    // console.log("Initial:", level);       
-
-    function handleCardClick(e){        
-        setModule(pv=>e.target.id);    
-        setLevel(pv=>pv+1)        
-        // console.log("click:", level);     
-    }
-
-    function handleSubCardClick(e){     
-        const data = e.target.getAttribute('data-instruction');
-        console.log(data)                  
-        switch(level){
-            case 1: //CHapter
-                setChapter(e.target.id);  
-                setLevel(pv=>pv+1)                       
-                break;
-            case 2: //SubChapter
-                setSubChapter(e.target.id); 
-                setLevel(pv=>pv+1)                
-                break;  
-            case 3: //Level
-                console.log("Instruction page");
-                navigate('/instruction');
-                break;
-        }     
-        // console.log("click:", level);    
-    }
-
     function handleBack(e){
         e.preventDefault();        
-        // console.log("button clicked");
-        // console.log(level);
-              
+             
         if(level>0)
-            setLevel(pv=>pv-1) 
+            setLevel(pv=>pv-1); 
+    }
+    
+    const CardList = getModuleList();     
+    
+    function handleCardClick(e){        
+        setModule(pv=>e.target.id);    
+        setLevel(pv=>pv+1);            
     }
 
-    useEffect(()=>{        
-        function getList(module, chapter, subChapter){
-            //  console.log(module, chapter, subChapter);
-            let itemObject = "";               
-                switch(level){
-                    case 1: 
-                        itemObject = getObject(module, "", "");        //Chapters                            
-                        // console.log("Chapter");   
-                        break;                                 
-                    case 2:
-                        setChapter(chapter);                
-                        itemObject = getObject(module, chapter, "");   //Sub Chapters
-                        updateTesCode(pv=>itemObject.testCode);                       
-                        // console.log("SubChapter");
-                        break;
-                    case 3:
-                        setSubChapter(subChapter);                
-                        itemObject = getObject(module, chapter, subChapter); //Levels                      
-                        // console.log("Level");
-                        break;                                                  
-                    }
+    function handleSubCardClick(e){
+        const instruction = e.target.getAttribute("data-instruction");
+        const example = e.target.getAttribute("data-example");
+        
+        // console.log(e.target.id, "inst : ", instruction, "example : ",example);
 
-            console.log(itemObject);
-            updateInstruction(pv=>itemObject.instruction);           
-            if(itemObject)
+        updateInstruction(instruction);
+        updateExample(example);
+
+        switch(level){
+            case 1:
+                setChapter(e.target.id);                
+            break;
+            case 2:
+                setSubChapter(e.target.id);                
+            break;
+            case 3:
+                navigate('/instruction');
+            break;
+        }
+        setLevel(pv=>pv+1);
+    }
+
+    useEffect(()=>{
+        let ItemObject = {}
+        switch(level){
+            case 1:
+                ItemObject = getObject(module, "", "");                
+            break;
+            case 2:
+                ItemObject = getObject(module, chapter, "");
+            break;
+            case 3:
+                ItemObject = getObject(module, chapter, subChapter);
+            break;
+        }
+
+        if(ItemObject)
+        {
+            // console.log(ItemObject.items);
+            if(ItemObject.items)
             {
-                if(itemObject.items.length===0) navigate('/instruction');
-                setSubCardList(pv=>itemObject.items);                 
-                // console.log("UE:", level);            
+                if(ItemObject.items.length>0)
+                    setSubCardList(pv=>ItemObject.items);
+                else
+                {
+                   navigate('/instruction');
+                }
             }
-        }       
-       
-        getList(module, chapter, subChapter);
-        // console.log("UseEffect called");
+        }
+
     }, [level]);
 
-    
+   
   
     
     return(
@@ -111,7 +104,7 @@ export default function Homepage(){
                     <div className={styles.chaptersContainer}>
                     {                        
                         subCardList.map(card=>{
-                            return <SubCard heading={card.title} key = {card.title} subheading={card.subTitle} handleClick = {handleSubCardClick}/>
+                            return <SubCard heading={card.title} key = {card.title} subheading={card.subTitle} instruction = {card.instruction} example = {card.example} handleClick = {handleSubCardClick}/>
                         }) 
                     }
                     </div>)
