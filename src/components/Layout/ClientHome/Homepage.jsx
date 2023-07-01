@@ -33,7 +33,7 @@ export default function Homepage(){
     function handleSubCardClick(e){
         const instruction = e.target.getAttribute("data-instruction");
         const example = e.target.getAttribute("data-example");
-        
+       
         // console.log(e.target.id, "inst : ", instruction, "example : ",example);
 
         updateInstruction(instruction);
@@ -54,26 +54,27 @@ export default function Homepage(){
     }
 
     useEffect(()=>{
-        let ItemObject = {}
+        let itemObject = {}
         switch(level){
             case 1:
-                ItemObject = getObject(module, "", "");                
+                itemObject = getObject(module, "", "");                
             break;
             case 2:
-                ItemObject = getObject(module, chapter, "");
+                itemObject = getObject(module, chapter, "");
+                updateTesCode(pv=>itemObject.testCode);
             break;
             case 3:
-                ItemObject = getObject(module, chapter, subChapter);
+                itemObject = getObject(module, chapter, subChapter);
             break;
         }
 
-        if(ItemObject)
+        if(itemObject)
         {
-            // console.log(ItemObject.items);
-            if(ItemObject.items)
+            // console.log(itemObject.items);
+            if(itemObject.items)
             {
-                if(ItemObject.items.length>0)
-                    setSubCardList(pv=>ItemObject.items);
+                if(itemObject.items.length>0)
+                    setSubCardList(pv=>itemObject.items);
                 else
                 {
                    navigate('/instruction');

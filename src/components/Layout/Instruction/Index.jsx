@@ -19,9 +19,11 @@ export default function Index(){
                 <div className={styles.instruction}>
                     {instruction}
                 </div>
-                <div className={styles.example}>
+                {
+                example!=""?(<div className={styles.example}>
                     {example}
-                </div>                
+                </div>):null         
+                }   
             </div>
 
             <div className = {styles.buttonContainer}>
