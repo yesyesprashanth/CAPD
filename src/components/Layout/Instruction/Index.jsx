@@ -12,6 +12,9 @@ export default function Index(){
         navigate('/auditory-testpage')
     }
 
+    const exampleList = example.split("|");
+    console.log(exampleList.length);
+
     return (
         <div className = {styles.container}>
             <div className = {styles.title}> Instruction </div>
@@ -20,9 +23,20 @@ export default function Index(){
                     {instruction}
                 </div>
                 {
-                example!=""?(<div className={styles.example}>
-                    {example}
-                </div>):null         
+                    exampleList.length<1?(
+                        example!=""?(
+                            <div className={styles.example}>
+                                {example}
+                            </div>                        
+                        ):null         
+                    ):(
+                        example!=""?(
+                            <div className={styles.example}>
+                                <div>{exampleList[0]}</div>
+                                <div>{exampleList[1]}</div>
+                            </div>                 
+                       ):null  
+                    )
                 }   
             </div>
 
