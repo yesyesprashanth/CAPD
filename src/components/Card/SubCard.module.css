@@ -1,0 +1,23 @@
+.container{
+    background-color: var(--button-color);
+    width: 200px;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    color:var(--text-color-white);    
+    text-align: center;    
+    box-shadow: 3px 3px 10px rgba(0,0,0, 0.6);
+    
+}
+
+.heading{
+    font-size: 18px;
+}
+
+.subheading{
+    font-size: 14px;
+}

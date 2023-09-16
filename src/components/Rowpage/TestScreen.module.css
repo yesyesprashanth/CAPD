@@ -1,0 +1,55 @@
+.container{
+    width:360px;
+    border: 1px solid var(--button-color);
+    border-radius: 12px;
+    padding:10px;
+    margin: 10px;    
+}
+
+.level{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.instruction{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;    
+    padding-block: 25px;    
+    font-size: 20px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 200px;
+}
+
+.buttonList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:20px;
+    width: 100%;    
+    margin-top: 20px;
+}
+
+.buttonList button{
+    width:150px;
+}
+
+.correct {
+    background-color: #16680E;
+    
+}
+
+.wrong {
+    background-color: #730D0D;    
+}
+
+
