@@ -41,6 +41,8 @@ export default function LoginForm(){
                 else
                     setMessage(pv=>"Invalid ClientId/Password");
             }
+            else
+                setMessage(pv=>"Invalid ClientId/Password");
         });
         
      }
