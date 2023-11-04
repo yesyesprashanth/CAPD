@@ -31,6 +31,7 @@ export default function LoginForm(){
 
     function handleClick(e){       
         AuthenticateUser(clientId, password, data=>{
+            console.log(data);
             if(data!=="")
             {
                 if(data.response === "success")
