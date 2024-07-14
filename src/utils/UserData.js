@@ -25,6 +25,7 @@ export async function AuthenticateUser(clientId, password, callback){
     try {
         const response = await fetch((backendIP + "/login"), {
             "method":"POST",
+            
             "headers" : {
                 "Accept": "application/json",
                 "content-type":"application/json"

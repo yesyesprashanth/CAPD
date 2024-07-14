@@ -7,6 +7,7 @@ import TestContext from "../store/testContextProvider";
 
 export default function TestPage(){
     const {testData} = useContext(TestContext);
+    console.log("InstructionPage - TestCode", testData.testCode)
 
     return(
         <Layout>

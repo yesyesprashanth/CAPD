@@ -13,7 +13,7 @@ export default function TestScreen1(){
     const navigate = useNavigate();
 
     const [audioData, setAudioData] = useState("");  
-    const [folderPath, setfolderPath] = useState("auditory/audanalysis/vowels");       
+    const [folderPath, setfolderPath] = useState("");       
     const [fileNames, setFileNames] = useState([]);    
     const [currentAudio, setCurrentAudio] = useState(0);
     const [score, setScore] = useState(0);
@@ -41,7 +41,10 @@ export default function TestScreen1(){
             color2: "#730D0D"
         }        
     ]
+
+
     useEffect(()=>{
+        console.log("order1")
         function setButton(){
             if(testData.testCode===1 || testData.testCode===3 || testData.testCode===3.1 || testData.testCode===4){
                 setButtonData(pv=>({
@@ -53,18 +56,18 @@ export default function TestScreen1(){
                 }))                
             }                
         }
-
         setButton();
-    }, [testData.testCode]);
+    }, [testData.testCode]); 
 
 
     //Join all the foldername to get the folderpath, Get the option list
-    useEffect(()=>{
+    useEffect(()=>{        
         setfolderPath(pv=>getFolderNames(testData.folderNames));  
+        console.log("order2", folderPath)
        
         async function getOptions(){
-            await getOptionList(testData.folderNames[testData.folderNames.length-1], (data)=>{
-                console.log("OptionList", data);                
+            await getOptionList(testData.folderNames[testData.folderNames.length-1], getFolderNames(testData.folderNames), (data)=>{
+                // console.log("OptionList", data);                
                 setOptioList(pv=>data);
             });
         };
@@ -73,27 +76,42 @@ export default function TestScreen1(){
             getOptions();             
     }, [])
 
-    //Get the fileCount from the folder
-    useEffect(()=>{
-        async function getFileNames(){    
-            await getFileCount(folderPath, fileCount => {               
-                setFileNames(pv=>getFilenamesInWords(1,fileCount)); 
-            });           
-        }        
-        getFileNames();         
-        console.log("Calling FolderPath update function", folderPath);
-    }, [folderPath]);
+
+    ///////////////////Remove Option file from the folder in Auditory Assos Module, It causes no data error"
+
+    //Get the fileCount from the folder (request to backend)
+    useEffect(()=>{     
+        if(folderPath!="")
+        {   
+            console.log("order3")            
+            async function getFileNames(){    
+                await getFileCount(folderPath, fileCount => {   
+                    console.log("calling randomise with filecount", fileCount)           
+                    fileCount = fileCount; // reduce one filecount, because some folder as option file
+
+                    //If the module is sendtence, Then There are three image files for each audio file, hence 
+                    //Divide the file count by 4
+                    if(testData.testCode===3.1)
+                        fileCount = fileCount/4;
+
+                    setFileNames(pv=>getFilenamesInWords(1,fileCount, true)); 
+                    // console.log("testPage filelist", fileNames)
+                });           
+            }        
+            getFileNames(); 
+
+            console.log("Calling FolderPath update function", folderPath);
+        }
+
+    }, [folderPath]); 
    
+    ////////////////////////Repeat from here for Each Question////////////////////////////////
 
-    function PlayNextAudio(){
-        console.log("Calling Next Audio Function");
-           if(currentAudio>=fileNames.length-1) setCurrentAudio(pv=>0);
-           else setCurrentAudio(pv=>pv+1);
-    }
-
-    //Get the audio and options from the server
-    useEffect(()=>{ 
-        
+    
+    //Get the audio and options from the server(backend)
+    useEffect(()=>{
+        console.log("order4")
+        console.log(currentAudio, fileNames)
         async function setImageOptionList(){
             await getImageOptionList(folderPath, fileNames[currentAudio], (data)=>{
                 console.log("getOptionlist", data);
@@ -103,6 +121,7 @@ export default function TestScreen1(){
         }
         
         async function getAudiofile(){
+            console.log(folderPath + "/" + fileNames[currentAudio])
             await getAudio(folderPath + "/" + fileNames[currentAudio], (data)=>{                  
                 setAudioData(data);                
                 if(testData.testCode===3)
@@ -116,27 +135,37 @@ export default function TestScreen1(){
                 }
             });
         };
-        if(fileNames.length>0){    
+        
+        if(fileNames.length>0 ){    
             console.log("Calliing Audio file function")     
             getAudiofile();
         }
             
     }, [currentAudio, fileNames]);
 
-    useEffect(()=>{              
-        play();
+    // These set of functions plays the audio file
+    useEffect(()=>{   
+        console.log("order 5")           
+        if(audioData) play();
     }, [audioData]);
 
     function play(){    
         console.log("Calling Play function");
         setTimeout(() => {
-            if(audioData!="")
+            if(audioData!=="")
             {
                 const audio = new Audio(audioData);               
                 audio.play();  
                 console.log(audio);
             }
         }, 500);        
+    }
+
+    function  PlayNextAudio(){
+        console.log("Calling Next Audio Function");
+
+           if(currentAudio>=fileNames.length-1) setCurrentAudio(pv=>0);
+           else setCurrentAudio(pv=>pv+1);
     }
    
     function handleRepeat(){
@@ -180,6 +209,7 @@ export default function TestScreen1(){
                     <>                              
                     <img src={audioIcon} alt='audio icon' />                       
                     <div className={styles.optionList}>
+
                         <div>
                             <div className={styles.option}>{opt[0]}</div>
                             <div className = {styles.optName}>1</div>
@@ -192,6 +222,7 @@ export default function TestScreen1(){
                             <div className={styles.option}>{opt[2]}</div>
                             <div className = {styles.optName}>3</div>
                         </div>
+
                     </div>                          
                     </>
                 )

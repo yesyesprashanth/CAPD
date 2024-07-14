@@ -25,9 +25,10 @@ export default function Homepage(){
             break;
             case 3: testData.updateSubChapter(pv=>"");
             break;
+            case 4: testData.updateSubLevel(pv=>"");
+            break;
             default:                
         }
-
              
         if(testData.level>0)
             testData.updateLevel(pv=>pv-1); 
@@ -50,27 +51,26 @@ export default function Homepage(){
               
         instruction.updateInstruction(pv=>instructionData);
         instruction.updateExample(example);
+        setFolderNames(testData.level, folderName, testData.folderNames, testData.updateFolderNames)        
 
         switch(testData.level){
             case 1:
-                testData.updateChapter(e.target.id);  
-                setFolderNames(1, folderName, testData.folderNames, testData.updateFolderNames)
+                testData.updateChapter(e.target.id);
                 testData.updateLevel(pv=>pv+1);              
             break;
             case 2:
-                testData.updateSubChapter(e.target.id);                
-                setFolderNames(2, folderName, testData.folderNames, testData.updateFolderNames)
+                testData.updateSubChapter(e.target.id);
                 testData.updateLevel(pv=>pv+1);
             break;
-            case 3:                
-                setFolderNames(3, folderName, testData.folderNames, testData.updateFolderNames)
+            case 3:                                
+                testData.updateSubLevel(e.target.id);
+                testData.updateLevel(pv=>pv+1);
+            break;
+            case 4:                                
                 navigate('/instruction');
             break;
-            default:
-               
-        }
-
-        
+            default:               
+        }        
     }
 
     
@@ -79,25 +79,27 @@ export default function Homepage(){
     useEffect(()=>{
 
         // console.log(testData.module, testData.level, testData.chapter, testData.subChapter);
-        // console.log(testData.folderNames)
-
+        // console.log(testData.folderNames)        
 
         let itemObject = {}              
         switch(testData.level){
-            case 1:                
-                itemObject = getObject(testData.module, "", "");                        
+            case 1:                 
+                itemObject = getObject(testData.module, "", "", "");                        
             break;
-            case 2:
-                itemObject = getObject(testData.module, testData.chapter, "");                            
+            case 2:               
+                itemObject = getObject(testData.module, testData.chapter, "","");                            
             break;
-            case 3:
-                itemObject = getObject(testData.module, testData.chapter, testData.subChapter);
+            case 3:               
+                itemObject = getObject(testData.module, testData.chapter, testData.subChapter,"");
+                testData.updateTesCode(pv=>itemObject.testCode);
+            break;
+            case 4:               
+                itemObject = getObject(testData.module, testData.chapter, testData.subChapter, testData.subLevel);
                 testData.updateTesCode(pv=>itemObject.testCode);
             break;
             default:               
         }
-
-        
+               
         if(itemObject)
         {     
             if(itemObject.items)
@@ -114,7 +116,6 @@ export default function Homepage(){
                 }
             }
         }
-
     }, [testData.level]);
 
    

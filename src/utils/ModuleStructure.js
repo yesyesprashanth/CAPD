@@ -35,6 +35,7 @@ const moduleList = [
                                 "title": "1.3.1 Initial",
                                 "folderName" : "initial",
                                 "subTitle": "",
+                                "testCode" : 1,
                                 "items":[],
                                 "instruction" : "ನೀವು ಕೇಳುವ ಪದದಲ್ಲಿನ ಮೊದಲ ಅಕ್ಷರವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ",
                                 "example" : "ಉದಾಹರಣೆ : ಅಪ್ಪ = ಅ"
@@ -43,6 +44,7 @@ const moduleList = [
                                 "title": "1.3.2 Medial",
                                 "folderName" : "medial",
                                 "subTitle": "",
+                                "testCode" : 1,
                                 "items":[],
                                 "instruction" : "ನೀವು ಕೇಳುವ ಪದದಲ್ಲಿನ ಮಧ್ಯದ ಅಕ್ಷರವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ",
                                 "example" : "ಉದಾಹರಣೆ : ಕಮಲ = ಮ"                                
@@ -51,6 +53,7 @@ const moduleList = [
                                 "title": "1.3.3 Final",
                                 "folderName" : "final",
                                 "subTitle": "",
+                                "testCode" : 1,
                                 "items":[],
                                 "instruction" : "ನೀವು ಕೇಳುವ ಪದದಲ್ಲಿನ ಕೊನೆಯ ಅಕ್ಷರವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ",
                                 "example" : "ಉದಾಹರಣೆ : ಆಹಾರ = ರ"
@@ -69,6 +72,7 @@ const moduleList = [
                                 "title": "Familiar",                                 
                                 "folderName" : "familiar",
                                 "subTitle": "",
+                                "testCode" : 1,
                                 "items":[],
                                 "instruction" : "ನೀವು ಕೇಳುವ ಪದದಲ್ಲಿ ಯಾವ ಯಾವ  ಅಕ್ಷರಗಳಿವೆ ಎಂದು ಹೇಳಿ?",
                                 "example" : "ಉದಾಹರಣೆ : ಆರು = ಆ-ರು"
@@ -77,6 +81,7 @@ const moduleList = [
                                 "title": "Unfamiliar",    
                                 "folderName" : "unfamiliar",                             
                                 "subTitle": "",
+                                "testCode" : 1,
                                 "items":[],
                                 "instruction" : "ನೀವು ಕೇಳುವ ಪದದಲ್ಲಿ ಯಾವ ಯಾವ  ಅಕ್ಷರಗಳಿವೆ ಎಂದು ಹೇಳಿ?",
                                 "example" : "ಉದಾಹರಣೆ : ಬರಹ = /ಬ/ /ರ/ /ಹ/"
@@ -143,18 +148,68 @@ const moduleList = [
                         "folderName" : "Vowels",
                         "subTitle" : "",
                         "testCode" : 3,
-                        "items" : [],
-                        "instruction" : "ಕೇಳಿದ ಅಕ್ಷರವನ್ನು ಗುರುತಿಸಿ",
-                        "example" : "ಉದಾಹರಣೆ: ಆ ಶಬ್ದವನ್ನು  ಕೇಳಿ = ಈ ಉ ಆ|ಉತ್ತರ: ಆ ಅಕ್ಷರವನ್ನು ತೊರಿಸಬೇಕು"
+                        "items" : [
+                            {
+                                "title" : "Easy",
+                                "folderName" : "easy",
+                                "testCode" : 3,
+                                "items" : [],
+                                "instruction" : "ಕೇಳಿದ ಅಕ್ಷರವನ್ನು ಗುರುತಿಸಿ", 
+                                "example" : "ಉದಾಹರಣೆ: ಆ ಶಬ್ದವನ್ನು  ಕೇಳಿ = ಈ ಉ ಆ|ಉತ್ತರ: ಆ ಅಕ್ಷರವನ್ನು ತೊರಿಸಬೇಕು"
+                            },
+                            {
+                                "title" : "Difficult",
+                                "folderName" : "difficult",
+                                "testCode" : 3,
+                                "items" : [],
+                                "instruction" : "ಕೇಳಿದ ಅಕ್ಷರವನ್ನು ಗುರುತಿಸಿ", 
+                                "example" : "ಉದಾಹರಣೆ: ಆ ಶಬ್ದವನ್ನು  ಕೇಳಿ = ಈ ಉ ಆ|ಉತ್ತರ: ಆ ಅಕ್ಷರವನ್ನು ತೊರಿಸಬೇಕು"
+                            },
+                            {
+                                "title" : "Hard",
+                                "folderName" : "Hard",
+                                "testCode" : 3,
+                                "items" : [],
+                                "instruction" : "ಕೇಳಿದ ಅಕ್ಷರವನ್ನು ಗುರುತಿಸಿ", 
+                                "example" : "ಉದಾಹರಣೆ: ಆ ಶಬ್ದವನ್ನು  ಕೇಳಿ = ಈ ಉ ಆ|ಉತ್ತರ: ಆ ಅಕ್ಷರವನ್ನು ತೊರಿಸಬೇಕು"
+                            }
+                        ],
+                        "instruction" : "",
+                        "example" : ""
                     }, 
                     {
                         "title" : "3.2 consonants",
                         "folderName" : "Consonants",
                         "subTitle" : "",
                         "testCode" : 3,
-                        "items" : [],
-                        "instruction" : "ಕೇಳಿದ ಅಕ್ಷರವನ್ನು ಗುರುತಿಸಿ",
-                        "example" : "ಉದಾಹರಣೆ: ಕ ಶಬ್ದವನ್ನು ಕೇಳಿ = ಕ ,ತ,  ಪ|ಉತ್ತರ: ಕ ಅಕ್ಷರವನ್ನು ತೊರಿಸಬೇಕು"
+                        "items" : [
+                            {
+                                "title" : "Easy",
+                                "folderName" : "easy",
+                                "testCode" : 3,
+                                "items" : [],
+                                "instruction" : "ಕೇಳಿದ ಅಕ್ಷರವನ್ನು ಗುರುತಿಸಿ", 
+                                "example" : "ಉದಾಹರಣೆ: ಕ ಶಬ್ದವನ್ನು ಕೇಳಿ = ಕ ,ತ,  ಪ|ಉತ್ತರ: ಕ ಅಕ್ಷರವನ್ನು ತೊರಿಸಬೇಕು"
+                            },
+                            {
+                                "title" : "Difficult",
+                                "folderName" : "difficult",
+                                "testCode" : 3,
+                                "items" : [],
+                                "instruction" : "ಕೇಳಿದ ಅಕ್ಷರವನ್ನು ಗುರುತಿಸಿ", 
+                                "example" : "ಉದಾಹರಣೆ: ಕ ಶಬ್ದವನ್ನು ಕೇಳಿ = ಕ ,ತ,  ಪ|ಉತ್ತರ: ಕ ಅಕ್ಷರವನ್ನು ತೊರಿಸಬೇಕು"
+                            },
+                            {
+                                "title" : "Hard",
+                                "folderName" : "Hard",
+                                "testCode" : 3,
+                                "items" : [],
+                                "instruction" : "ಕೇಳಿದ ಅಕ್ಷರವನ್ನು ಗುರುತಿಸಿ", 
+                                "example" : "ಉದಾಹರಣೆ: ಕ ಶಬ್ದವನ್ನು ಕೇಳಿ = ಕ ,ತ,  ಪ|ಉತ್ತರ: ಕ ಅಕ್ಷರವನ್ನು ತೊರಿಸಬೇಕು"
+                            }
+                        ],
+                        "instruction" : "",
+                        "example" : ""
                     },
                     {
                         "title" : "3.3 syllables",
@@ -201,39 +256,101 @@ const moduleList = [
                                 "title": "4.1.1 Initial",
                                 "folderName" : "Initial",
                                 "subtitle": "",
+                                "testCode" : 1,
                                 "items": [
                                     {
-                                        "title" : "Level 1",
-                                        "folderName" : "Level1",
-                                        "items" : []
+                                        "title" : "Easy",
+                                        "folderName" : "easy",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                        "example" : "ಉದಾಹರಣೆ : .... ತಗಡಿನ ತುತ್ತೂರಿ|ಉತ್ತರ: ಬಣ್ಣದ"
                                     },
                                     {
-                                        "title" : "Level 2",
-                                        "folderName" : "Level2",
-                                        "items" : []
+                                        "title" : "Difficult",
+                                        "folderName" : "difficult",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                        "example" : "ಉದಾಹರಣೆ : .... ತಗಡಿನ ತುತ್ತೂರಿ|ಉತ್ತರ: ಬಣ್ಣದ"
                                     },
                                     {
-                                        "title" : "Level 3",
-                                        "folderName" : "Level2",
-                                        "items" : []
+                                        "title" : "Hard",
+                                        "folderName" : "Hard",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                        "example" : "ಉದಾಹರಣೆ : .... ತಗಡಿನ ತುತ್ತೂರಿ|ಉತ್ತರ: ಬಣ್ಣದ"
                                     }
                                 ],
-                                "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
-                                "example" : "ಉದಾಹರಣೆ : .... ತಗಡಿನ ತುತ್ತೂರಿ|ಉತ್ತರ: ಬಣ್ಣದ"
+                                "instruction" : "", 
+                                "example" : ""
                             },
                             {
                                 "title": "4.1.2 medial",
-                                "folderName" :"Medial",
+                                "folderName" :"Medial",                                
                                 "subtitle": "",
-                                "items": [],
-                                "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ",
-                                "example" : "ಉದಾಹರಣೆ : ಒಂದು ..... ಬಾಳೆಲೆ ಹರಡು|ಉತ್ತರ: ಎರಡು"
+                                "testCode" : 1,
+                                "items": [
+                                    {
+                                        "title" : "Easy",
+                                        "folderName" : "easy",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                        "example" : "ಉದಾಹರಣೆ : ಒಂದು ..... ಬಾಳೆಲೆ ಹರಡು|ಉತ್ತರ: ಎರಡು"
+                                    },
+                                    {
+                                        "title" : "Difficult",
+                                        "folderName" : "difficult",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                        "example" : "ಉದಾಹರಣೆ : ಒಂದು ..... ಬಾಳೆಲೆ ಹರಡು|ಉತ್ತರ: ಎರಡು"
+                                    },
+                                    {
+                                        "title" : "Hard",
+                                        "folderName" : "Hard",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                        "example" : "ಉದಾಹರಣೆ : ಒಂದು ..... ಬಾಳೆಲೆ ಹರಡು|ಉತ್ತರ: ಎರಡು"
+                                    }
+                                ],
+                                "instruction" : "",
+                                "example" : ""
                             },
                             {
                                 "title": "4.1.3 Final",
                                 "folderName" :"Final",
                                 "subtitle": "",
-                                "items": [],
+                                "testCode" : 1,
+                                "items": [
+                                    {
+                                        "title" : "Easy",
+                                        "folderName" : "easy",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                        "example" : "ಉದಾಹರಣೆ : ನಾಯಿ ಮರಿ ನಾಯಿ ಮರಿ ತಿಂಡಿ.....|ಉತ್ತರ: ಬೇಕೇ"
+                                    },
+                                    {
+                                        "title" : "Difficult",
+                                        "folderName" : "difficult",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                        "example" : "ಉದಾಹರಣೆ : ನಾಯಿ ಮರಿ ನಾಯಿ ಮರಿ ತಿಂಡಿ.....|ಉತ್ತರ: ಬೇಕೇ"
+                                    },
+                                    {
+                                        "title" : "Hard",
+                                        "folderName" : "Hard",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                        "example" : "ಉದಾಹರಣೆ : ನಾಯಿ ಮರಿ ನಾಯಿ ಮರಿ ತಿಂಡಿ.....|ಉತ್ತರ: ಬೇಕೇ"
+                                    }
+                                ],
                                 "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
                                 "example" : "ಉದಾಹರಣೆ : ನಾಯಿ ಮರಿ ನಾಯಿ ಮರಿ ತಿಂಡಿ.....|ಉತ್ತರ: ಬೇಕೇ"
                             },
@@ -251,23 +368,97 @@ const moduleList = [
                                 "title": "4.2.1 Initial",
                                 "folderName" : "Initial",
                                 "subTitle": "",
-                                "items": [],
-                                "instruction" : "ಬಿಟ್ಟ ಅಕ್ಷರವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ",
-                                "example" : "ಉದಾಹರಣೆ : ಆಕಾಶದಲ್ಲಿ  _ಮಾನ ಹಾರುತ್ತದೆ = ವಿ"
+                                "testCode" : 1,
+                                "items": [
+                                    {
+                                        "title" : "Easy",
+                                        "folderName" : "easy",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                        "example" : "ಉದಾಹರಣೆ : ಆಕಾಶದಲ್ಲಿ  _ಮಾನ ಹಾರುತ್ತದೆ = ವಿ"
+                                    },
+                                    {
+                                        "title" : "Difficult",
+                                        "folderName" : "difficult",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                        "example" : "ಉದಾಹರಣೆ : ಆಕಾಶದಲ್ಲಿ  _ಮಾನ ಹಾರುತ್ತದೆ = ವಿ"
+                                    },
+                                    {
+                                        "title" : "Hard",
+                                        "folderName" : "Hard",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                        "example" : "ಉದಾಹರಣೆ : ಆಕಾಶದಲ್ಲಿ  _ಮಾನ ಹಾರುತ್ತದೆ = ವಿ"
+                                    }
+                                ],
+                                "instruction" : "",
+                                "example" : ""
                             },
                             {
                                 "title": "4.2.2 Medial",
                                 "folderName" : "Medial",
                                 "subTitle": "",
-                                "items": [],
+                                "testCode" : 1,
+                                "items": [{
+                                    "title" : "Easy",
+                                    "folderName" : "easy",
+                                    "testCode" : 1,
+                                    "items" : [],
+                                    "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                    "example" : "ಉದಾಹರಣೆ : ದೀಪಾವಳಿ ಹಬ್ಬದಲ್ಲಿ ಮಕ್ಕಳು ಪ_ಕಿ ಹಚ್ಚಿದರು  = ಟಾ"
+                                },
+                                {
+                                    "title" : "Difficult",
+                                    "folderName" : "difficult",
+                                    "testCode" : 1,
+                                    "items" : [],
+                                    "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                    "example" : "ಉದಾಹರಣೆ : ದೀಪಾವಳಿ ಹಬ್ಬದಲ್ಲಿ ಮಕ್ಕಳು ಪ_ಕಿ ಹಚ್ಚಿದರು  = ಟಾ"
+                                },
+                                {
+                                    "title" : "Hard",
+                                    "folderName" : "Hard",
+                                    "testCode" : 1,
+                                    "items" : [],
+                                    "instruction" : "ಬಿಟ್ಟ ಪದವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                    "example" : "ಉದಾಹರಣೆ : ದೀಪಾವಳಿ ಹಬ್ಬದಲ್ಲಿ ಮಕ್ಕಳು ಪ_ಕಿ ಹಚ್ಚಿದರು  = ಟಾ"
+                                }],
                                 "instruction" : "ಬಿಟ್ಟ ಅಕ್ಷರವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
                                 "example" : "ಉದಾಹರಣೆ : ದೀಪಾವಳಿ ಹಬ್ಬದಲ್ಲಿ ಮಕ್ಕಳು ಪ_ಕಿ ಹಚ್ಚಿದರು  = ಟಾ"
                             },
                             {
                                 "title": "4.2.3 Final",
-                                "folderName" : "Final    ",
+                                "folderName" : "Final",
                                 "subTitle": "",
-                                "items": [],
+                                "testCode" : 1,
+                                "items": [{
+                                    "title" : "Easy",
+                                    "folderName" : "easy",
+                                    "testCode" : 1,
+                                    "items" : [],
+                                    "instruction" : "ಬಿಟ್ಟ ಅಕ್ಷರವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                    "example" : "ಉದಾಹರಣೆ : ಪುಸ್ತಕವನ್ನು ಹೆಚ್ಚು ಓದುವುದರಿಂದ ಜ್ಞಾ_ ಹೆಚ್ಚಾಗುತ್ತದೆ. = ನ"
+                                },
+                                {
+                                    "title" : "Difficult",
+                                    "folderName" : "difficult",
+                                    "testCode" : 1,
+                                    "items" : [],
+                                    "instruction" : "ಬಿಟ್ಟ ಅಕ್ಷರವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                    "example" : "ಉದಾಹರಣೆ : ಪುಸ್ತಕವನ್ನು ಹೆಚ್ಚು ಓದುವುದರಿಂದ ಜ್ಞಾ_ ಹೆಚ್ಚಾಗುತ್ತದೆ. = ನ"
+                                },
+                                {
+                                    "title" : "Hard",
+                                    "folderName" : "Hard",
+                                    "testCode" : 1,
+                                    "items" : [],
+                                    "instruction" : "ಬಿಟ್ಟ ಅಕ್ಷರವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
+                                    "example" : "ಉದಾಹರಣೆ : ಪುಸ್ತಕವನ್ನು ಹೆಚ್ಚು ಓದುವುದರಿಂದ ಜ್ಞಾ_ ಹೆಚ್ಚಾಗುತ್ತದೆ. = ನ"
+                                }],
                                 "instruction" : "ಬಿಟ್ಟ ಅಕ್ಷರವನ್ನು ಪತ್ತೆ ಹಚ್ಚಿ", 
                                 "example" : "ಉದಾಹರಣೆ : ಪುಸ್ತಕವನ್ನು ಹೆಚ್ಚು ಓದುವುದರಿಂದ ಜ್ಞಾ_ ಹೆಚ್ಚಾಗುತ್ತದೆ. = ನ"
                             },
@@ -288,7 +479,32 @@ const moduleList = [
                         "folderName" : "Vowels",    
                         "subTitle" : "",
                         "testCode" : 1,
-                        "items" : [],
+                        "items" : [
+                            {
+                                "title" : "Easy",
+                                "folderName" : "easy",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಈ ಶಬ್ದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ", 
+                                "example" : "ಉದಾಹರಣೆ : ಓ - ಉ = ಬೇರೆ"
+                            },
+                            {
+                                "title" : "Difficult",
+                                "folderName" : "difficult",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಈ ಶಬ್ದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ", 
+                                "example" : "ಉದಾಹರಣೆ : ಓ - ಉ = ಬೇರೆ"
+                            },
+                            {
+                                "title" : "Hard",
+                                "folderName" : "Hard",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಈ ಶಬ್ದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ", 
+                                "example" : "ಉದಾಹರಣೆ : ಓ - ಉ = ಬೇರೆ"
+                            }
+                        ],
                         "instruction" : "ಈ ಶಬ್ದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ", 
                         "example" : "ಉದಾಹರಣೆ : ಓ - ಉ = ಬೇರೆ"
                     },
@@ -302,6 +518,7 @@ const moduleList = [
                                 "title": "5.2.1 Easy",
                                 "folderName" : "Easy",    
                                 "subTitle":"",
+                                "testCode" : 1,
                                 "items":[],
                                 "instruction" : "ಈ ಶಬ್ದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ",
                                 "example" : "ಉದಾಹರಣೆ : ಗ - ಮ = ಬೇರೆ"
@@ -310,6 +527,7 @@ const moduleList = [
                                 "title": "5.2.2 Difficult",
                                 "folderName" : "Difficult",    
                                 "subTitle":"",
+                                "testCode" : 1,
                                 "items":[],
                                 "instruction" : "ಈ ಶಬ್ದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ",
                                 "example" : "ಉದಾಹರಣೆ : ಕ - ಖ  =ಬೇರೆ"
@@ -323,7 +541,32 @@ const moduleList = [
                         "folderName" : "Clusters",  
                         "subTitle" : "",
                         "testCode" : 1,
-                        "items" : [],
+                        "items" : [
+                            {
+                                "title" : "Easy",
+                                "folderName" : "easy",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಈ ಶಬ್ದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ",
+                                "example" : "ಉದಾಹರಣೆ : ಸ್ತ್ರೀ - ಸ್ತ್ರೀ = ಒಂದೇ"
+                            },
+                            {
+                                "title" : "Difficult",
+                                "folderName" : "difficult",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಈ ಶಬ್ದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ",
+                                "example" : "ಉದಾಹರಣೆ : ಸ್ತ್ರೀ - ಸ್ತ್ರೀ = ಒಂದೇ"
+                            },
+                            {
+                                "title" : "Hard",
+                                "folderName" : "Hard",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಈ ಶಬ್ದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ",
+                                "example" : "ಉದಾಹರಣೆ : ಸ್ತ್ರೀ - ಸ್ತ್ರೀ = ಒಂದೇ"
+                            }
+                        ],
                         "instruction" : "ಈ ಶಬ್ದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ",
                         "example" : "ಉದಾಹರಣೆ : ಸ್ತ್ರೀ - ಸ್ತ್ರೀ = ಒಂದೇ"
                     },
@@ -332,7 +575,32 @@ const moduleList = [
                         "folderName" : "Phrases",  
                         "subTitle" : "",
                         "testCode" : 1,
-                        "items" : [],
+                        "items" : [
+                            {
+                                "title" : "Easy",
+                                "folderName" : "easy",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಈ ಪದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ",
+                                "example": "ಉದಾಹರಣೆ : ಬಹಳ ಒಳ್ಳೆಯ - ಬಹಳ ಒಳ್ಳೆಯ = ಒಂದೇ"
+                            },
+                            {
+                                "title" : "Difficult",
+                                "folderName" : "difficult",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಈ ಪದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ",
+                                "example": "ಉದಾಹರಣೆ : ಬಹಳ ಒಳ್ಳೆಯ - ಬಹಳ ಒಳ್ಳೆಯ = ಒಂದೇ"
+                            },
+                            {
+                                "title" : "Hard",
+                                "folderName" : "Hard",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಈ ಪದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ",
+                                "example": "ಉದಾಹರಣೆ : ಬಹಳ ಒಳ್ಳೆಯ - ಬಹಳ ಒಳ್ಳೆಯ = ಒಂದೇ"
+                            }
+                        ],
                         "instruction" : "ಈ ಪದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅವುಗಳು ಒಂದೇ ಅಥವಾ ಬೇರೆಯೇ ಎಂದು ಹೇಳಿ",
                         "example": "ಉದಾಹರಣೆ : ಬಹಳ ಒಳ್ಳೆಯ - ಬಹಳ ಒಳ್ಳೆಯ = ಒಂದೇ"
                     },
@@ -349,7 +617,32 @@ const moduleList = [
                         "folderName" : "AudPattern",
                         "subTitle" : "",
                         "testCode" : 1,
-                        "items" : [],
+                        "items" : [
+                            {
+                                "title" : "2 Pattern",
+                                "folderName" : "twopat",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಶಬ್ದಗಳನ್ನು  ಕೇಳಿ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
+                                "example" : "", 
+                            },
+                            {
+                                "title" : "3 Pattern",
+                                "folderName" : "threepat",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಶಬ್ದಗಳನ್ನು  ಕೇಳಿ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
+                                "example" : "", 
+                            },
+                            {
+                                "title" : "4 Pattern",
+                                "folderName" : "fourpat",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಶಬ್ದಗಳನ್ನು  ಕೇಳಿ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
+                                "example" : "", 
+                            }
+                        ],
                         "instruction" : "ಶಬ್ದಗಳನ್ನು  ಕೇಳಿ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
                         "example" : "",                        
                     },
@@ -358,7 +651,32 @@ const moduleList = [
                         "folderName" : "Humming",
                         "subTitle" : "",
                         "testCode" : 1,
-                        "items" : [],
+                        "items" : [
+                            {
+                                "title" : "2 Pattern",
+                                "folderName" : "twopat",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಗುನುಗುವುದನ್ನು ಕೇಳಿ ಅದರಂತೆ ನೀವು ಅನುಸರಿಸಿ",
+                                "example" : "", 
+                            },
+                            {
+                                "title" : "3 Pattern",
+                                "folderName" : "threepat",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಗುನುಗುವುದನ್ನು ಕೇಳಿ ಅದರಂತೆ ನೀವು ಅನುಸರಿಸಿ",
+                                "example" : "", 
+                            },
+                            {
+                                "title" : "4 Pattern",
+                                "folderName" : "fourpat",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಗುನುಗುವುದನ್ನು ಕೇಳಿ ಅದರಂತೆ ನೀವು ಅನುಸರಿಸಿ",
+                                "example" : "", 
+                            }
+                        ],
                         "instruction" : "ಗುನುಗುವುದನ್ನು ಕೇಳಿ ಅದರಂತೆ ನೀವು ಅನುಸರಿಸಿ",
                         "example" : ""
                     },
@@ -367,7 +685,32 @@ const moduleList = [
                         "folderName" : "PatternComp",
                         "subTitle" : "",
                         "testCode" : 1,
-                        "items" : [],
+                        "items" : [
+                            {
+                                "title" : "Easy",
+                                "folderName" : "easy",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಕೇಳಿ ಅದರ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
+                                "example" : "ಉದಾಹರಣೆ : ಹಿ ಹೊ ಹಿ --- = ಹೊ"
+                            },
+                            {
+                                "title" : "Difficult",
+                                "folderName" : "difficult",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಕೇಳಿ ಅದರ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
+                                "example" : "ಉದಾಹರಣೆ : ಹಿ ಹೊ ಹಿ --- = ಹೊ"
+                            },
+                            {
+                                "title" : "Hard",
+                                "folderName" : "Hard",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಕೇಳಿ ಅದರ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
+                                "example" : "ಉದಾಹರಣೆ : ಹಿ ಹೊ ಹಿ --- = ಹೊ"
+                            }
+                        ],
                         "instruction" : "ಕೇಳಿ ಅದರ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
                         "example" : "ಉದಾಹರಣೆ : ಹಿ ಹೊ ಹಿ --- = ಹೊ"
                     },
@@ -376,7 +719,32 @@ const moduleList = [
                         "folderName" : "Vowels",
                         "subTitle" : "",
                         "testCode" : 1,
-                        "items" : [],
+                        "items" : [
+                            {
+                                "title" : "Easy",
+                                "folderName" : "easy",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಪದಗಳ ಮಾದರಿಯನ್ನು ಕೇಳಿ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
+                                "example" : "ಉದಾಹರಣೆ : ಕೋಣ ಕೋಣೆ ಕೋಣ  ಕೋಣೆ ಕೋಣ ... = ಕೋಣೆ"
+                            },
+                            {
+                                "title" : "Difficult",
+                                "folderName" : "difficult",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಪದಗಳ ಮಾದರಿಯನ್ನು ಕೇಳಿ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
+                                "example" : "ಉದಾಹರಣೆ : ಕೋಣ ಕೋಣೆ ಕೋಣ  ಕೋಣೆ ಕೋಣ ... = ಕೋಣೆ"
+                            },
+                            {
+                                "title" : "Hard",
+                                "folderName" : "Hard",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಪದಗಳ ಮಾದರಿಯನ್ನು ಕೇಳಿ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
+                                "example" : "ಉದಾಹರಣೆ : ಕೋಣ ಕೋಣೆ ಕೋಣ  ಕೋಣೆ ಕೋಣ ... = ಕೋಣೆ"
+                            }
+                        ],
                         "instruction" : "ಪದಗಳ ಮಾದರಿಯನ್ನು ಕೇಳಿ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
                         "example" : "ಉದಾಹರಣೆ : ಕೋಣ ಕೋಣೆ ಕೋಣ  ಕೋಣೆ ಕೋಣ ... = ಕೋಣೆ"
                     },
@@ -394,7 +762,32 @@ const moduleList = [
                         "folderName" : "Clusters",
                         "subTitle" : "",
                         "testCode" : 1,
-                        "items" : [],
+                        "items" : [
+                            {
+                                "title" : "Easy",
+                                "folderName" : "easy",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಪದಗಳ ಮಾದರಿಯನ್ನು ಕೇಳಿ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
+                                "example" : "ಉದಾಹರಣೆ : ಮೈತ್ರಿ ಮೈತ್ರಿ ಮಿತ್ರ .... = ಮಿತ್ರ"                        
+                            },
+                            {
+                                "title" : "Difficult",
+                                "folderName" : "difficult",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಪದಗಳ ಮಾದರಿಯನ್ನು ಕೇಳಿ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
+                                "example" : "ಉದಾಹರಣೆ : ಮೈತ್ರಿ ಮೈತ್ರಿ ಮಿತ್ರ .... = ಮಿತ್ರ"                        
+                            },
+                            {
+                                "title" : "Hard",
+                                "folderName" : "Hard",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ಪದಗಳ ಮಾದರಿಯನ್ನು ಕೇಳಿ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
+                                "example" : "ಉದಾಹರಣೆ : ಮೈತ್ರಿ ಮೈತ್ರಿ ಮಿತ್ರ .... = ಮಿತ್ರ"                        
+                            }
+                        ],
                         "instruction" : "ಪದಗಳ ಮಾದರಿಯನ್ನು ಕೇಳಿ ಅದರ ಮಾದರಿಯಂತೆ ಅನುಸರಿಸಿ",
                         "example" : "ಉದಾಹರಣೆ : ಮೈತ್ರಿ ಮೈತ್ರಿ ಮಿತ್ರ .... = ಮಿತ್ರ"                        
                     },
@@ -425,7 +818,33 @@ const moduleList = [
                                 "title": "7.2.1 Familiar",
                                 "folderName" : "Familiar",  
                                 "subTitle": "",
-                                "items":[],
+                                "testCode" : 1,
+                                "items":[
+                                    {
+                                        "title" : "Easy",
+                                        "folderName" : "easy",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಅಕ್ಷರಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು  ಅದರಿಂದ ಪದವನ್ನು ರೂಪಿಸಲು ಒಟ್ಟಿಗೆ ಜೋಡಿಸಿ ಹೇಳಿ",
+                                        "example" : "ಉದಾಹರಣೆ : ಗ + ಗ + ನ = ಗಗನ"                       
+                                    },
+                                    {
+                                        "title" : "Difficult",
+                                        "folderName" : "difficult",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಅಕ್ಷರಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು  ಅದರಿಂದ ಪದವನ್ನು ರೂಪಿಸಲು ಒಟ್ಟಿಗೆ ಜೋಡಿಸಿ ಹೇಳಿ",
+                                        "example" : "ಉದಾಹರಣೆ : ಗ + ಗ + ನ = ಗಗನ"                       
+                                    },
+                                    {
+                                        "title" : "Hard",
+                                        "folderName" : "Hard",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಅಕ್ಷರಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು  ಅದರಿಂದ ಪದವನ್ನು ರೂಪಿಸಲು ಒಟ್ಟಿಗೆ ಜೋಡಿಸಿ ಹೇಳಿ",
+                                        "example" : "ಉದಾಹರಣೆ : ಗ + ಗ + ನ = ಗಗನ"                       
+                                    }
+                                ],
                                 "instruction" : "ಅಕ್ಷರಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು  ಅದರಿಂದ ಪದವನ್ನು ರೂಪಿಸಲು ಒಟ್ಟಿಗೆ ಜೋಡಿಸಿ ಹೇಳಿ",
                                 "example" : "ಉದಾಹರಣೆ : ಗ + ಗ + ನ = ಗಗನ"
                             },
@@ -433,7 +852,41 @@ const moduleList = [
                                 "title": "7.2.2 Unfamiliar",
                                 "folderName" : "Unfamiliar",  
                                 "subTitle": "",
-                                "items":[],
+                                "testCode" : 1,
+                                "items":[
+                                    {
+                                        "title" : "Easy",
+                                        "folderName" : "easy",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಅಕ್ಷರಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು  ಅದರಿಂದ ಪದವನ್ನು ರೂಪಿಸಲು ಒಟ್ಟಿಗೆ ಜೋಡಿಸಿ ಹೇಳಿ",
+                                        "example" : "ಉದಾಹರಣೆ : ಶೃ + o + ಗಾ + ರ =ಶೃoಗಾರ"                     
+                                    },
+                                    {
+                                        "title" : "Difficult",
+                                        "folderName" : "difficult",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಅಕ್ಷರಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು  ಅದರಿಂದ ಪದವನ್ನು ರೂಪಿಸಲು ಒಟ್ಟಿಗೆ ಜೋಡಿಸಿ ಹೇಳಿ",
+                                        "example" : "ಉದಾಹರಣೆ : ಶೃ + o + ಗಾ + ರ =ಶೃoಗಾರ"                     
+                                    },
+                                    {
+                                        "title" : "Hard",
+                                        "folderName" : "Hard",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಅಕ್ಷರಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು  ಅದರಿಂದ ಪದವನ್ನು ರೂಪಿಸಲು ಒಟ್ಟಿಗೆ ಜೋಡಿಸಿ ಹೇಳಿ",
+                                        "example" : "ಉದಾಹರಣೆ : ಶೃ + o + ಗಾ + ರ =ಶೃoಗಾರ"                      
+                                    },
+                                    {
+                                        "title" : "Hardest",
+                                        "folderName" : "Hardest",
+                                        "testCode" : 1,
+                                        "items" : [],
+                                        "instruction" : "ಅಕ್ಷರಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು  ಅದರಿಂದ ಪದವನ್ನು ರೂಪಿಸಲು ಒಟ್ಟಿಗೆ ಜೋಡಿಸಿ ಹೇಳಿ",
+                                        "example" : "ಉದಾಹರಣೆ : ಶೃ + o + ಗಾ + ರ =ಶೃoಗಾರ"                      
+                                    }
+                                ],
                                 "instruction" : "ಅಕ್ಷರಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು  ಅದರಿಂದ ಪದವನ್ನು ರೂಪಿಸಲು ಒಟ್ಟಿಗೆ ಜೋಡಿಸಿ ಹೇಳಿ",
                                 "example" : "ಉದಾಹರಣೆ : ಶೃ + o + ಗಾ + ರ =ಶೃoಗಾರ"
                             }
@@ -451,6 +904,7 @@ const moduleList = [
                                 "title": "7.3. Familiar",
                                 "folderName" : "Familiar",  
                                 "subTitle": "",
+                                "testCode" : 1,
                                 "items":[],
                                 "instruction" : "ಪದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅದರಿಂದ ಇನ್ನೊಂದು ಪದವನ್ನು ರೂಪಿಸಲು ಒಟ್ಟಿಗೆ ಜೋಡಿಸಿ ಹೇಳಿ",
                                 "example" : "ಉದಾಹರಣೆ : ನೀರು + ಕುಡಿ= ನೀರು ಕುಡಿ"
@@ -459,6 +913,7 @@ const moduleList = [
                                 "title": "7.3.2 Unfamiliar",
                                 "folderName" : "Unfamiliar",
                                 "subTitle": "",
+                                "testCode" : 1,
                                 "items":[],
                                 "instruction" : "ಪದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅದರಿಂದ ಇನ್ನೊಂದು ಪದವನ್ನು ರೂಪಿಸಲು ಒಟ್ಟಿಗೆ ಜೋಡಿಸಿ ಹೇಳಿ",
                                 "example" : "ಉದಾಹರಣೆ : ನಮಸ್ತೆ + ಮಾಡು= ನಮಸ್ತೆ ಮಾಡು"
@@ -477,6 +932,7 @@ const moduleList = [
                                 "title": "7.4.1 Familiar",
                                 "folderName" : "Familiar",
                                 "subTitle": "",
+                                "testCode" : 1,
                                 "items":[],
                                 "instruction" : "ಪದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅದರಿಂದ ವಾಕ್ಯವನ್ನು ರೂಪಿಸಲು ಒಟ್ಟಿಗೆ ಜೋಡಿಸಿ ಹೇಳಿ",
                                 "example" : "ಉದಾಹರಣೆ : ನಿನ್ನ + ಹೆಸರು + ಏನು? =ನಿನ್ನ  ಹೆಸರು ಏನು?"                                
@@ -485,6 +941,7 @@ const moduleList = [
                                 "title": "7.4.2 Unfamiliar",
                                 "folderName" : "Unfamiliar",
                                 "subTitle": "",
+                                "testCode" : 1,
                                 "items":[],
                                 "instruction" : "ಪದಗಳನ್ನು ಕೇಳಿಸಿಕೊಂಡು ಅದರಿಂದ ವಾಕ್ಯವನ್ನು ರೂಪಿಸಲು ಒಟ್ಟಿಗೆ ಜೋಡಿಸಿ ಹೇಳಿ",
                                 "example" : "ಉದಾಹರಣೆ : ಸೈನಿಕರು+ ದೇಶದ + ಗಡಿ + ಕಾಯುವರು =ಸೈನಿಕರು ದೇಶದ ಗಡಿ ಕಾಯುವರು"
@@ -515,7 +972,32 @@ const moduleList = [
                         "folderName" : "FollowDir",
                         "subTitle" : "",
                         "testCode" : 4.1,
-                        "items" : [],
+                        "items" : [
+                            {
+                                "title" : "Easy",
+                                "folderName" : "easy",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ನಾನು ಹೇಳುವುದನ್ನು ಗಮನ ಕೊಟ್ಟು ಕೇಳಿ ಅದರಂತೆ ಅನುಸರಿಸಿ ಮತ್ತು ಹಿನ್ನೆಲೆ ಶಬ್ದಕ್ಕೆ ಗಮನ ನೀಡದಿರಿ",
+                                "example" : ""
+                            },
+                            {
+                                "title" : "Difficult",
+                                "folderName" : "difficult",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ನಾನು ಹೇಳುವುದನ್ನು ಗಮನ ಕೊಟ್ಟು ಕೇಳಿ ಅದರಂತೆ ಅನುಸರಿಸಿ ಮತ್ತು ಹಿನ್ನೆಲೆ ಶಬ್ದಕ್ಕೆ ಗಮನ ನೀಡದಿರಿ",
+                                "example" : ""
+                            },
+                            {
+                                "title" : "Hard",
+                                "folderName" : "Hard",
+                                "testCode" : 1,
+                                "items" : [],
+                                "instruction" : "ನಾನು ಹೇಳುವುದನ್ನು ಗಮನ ಕೊಟ್ಟು ಕೇಳಿ ಅದರಂತೆ ಅನುಸರಿಸಿ ಮತ್ತು ಹಿನ್ನೆಲೆ ಶಬ್ದಕ್ಕೆ ಗಮನ ನೀಡದಿರಿ",
+                                "example" : ""
+                            }
+                        ],
                         "instruction" : "ನಾನು ಹೇಳುವುದನ್ನು ಗಮನ ಕೊಟ್ಟು ಕೇಳಿ ಅದರಂತೆ ಅನುಸರಿಸಿ ಮತ್ತು ಹಿನ್ನೆಲೆ ಶಬ್ದಕ್ಕೆ ಗಮನ ನೀಡದಿರಿ",
                         "example" : ""
                     },
@@ -576,22 +1058,59 @@ export function getModuleList(){
     return moduleList.map(module=>module.title);
 }
 
-export function getObject(moduleName, chapterName, subChapterName){  
+
+
+export function getObject(moduleName, chapterName, subChapterName, subLevel){  
     if(chapterName===""){    //Get Chapter list
         return moduleList.find(module=>module.title === moduleName)
     }else{
+        
+        const chapterList =  moduleList.find(module=>module.title === moduleName);   
         if(subChapterName==="") //Get Sub Chapter Names
-        {
-            const chapterList =  moduleList.find(module=>module.title === moduleName);             
-            return chapterList.items.find(item => item.title === chapterName);            
-        }else // get Level list
-        {
-            const chapterList =  moduleList.find(module=>module.title === moduleName);            
-            const subChapterList =  chapterList.items.find(item => item.title === chapterName);             
+            return chapterList.items.find(item => item.title === chapterName);
+
+        const subChapterList =  chapterList.items.find(item => item.title === chapterName);             
+        if(subLevel==="")
             return  subChapterList.items.find(item => item.title === subChapterName);             
-        }     
+        else
+        {
+            const subLevelList =  subChapterList.items.find(item => item.title === subChapterName);                
+            return  subLevelList.items.find(item => item.title === subLevel);             
+        }
+
+        
+        // if(subChapterName==="") //Get Sub Chapter Names
+        // {
+        //     const chapterList =  moduleList.find(module=>module.title === moduleName);             
+        //     return chapterList.items.find(item => item.title === chapterName);            
+        // }else // get Level list
+        // {
+        //     if(subLevel==="")
+        //     {
+        //         const chapterList =  moduleList.find(module=>module.title === moduleName);            
+        //         const subChapterList =  chapterList.items.find(item => item.title === chapterName);             
+        //         return  subChapterList.items.find(item => item.title === subChapterName);             
+        //     }else
+        //     {
+        //         const chapterList =  moduleList.find(module=>module.title === moduleName);            
+        //         const subChapterList =  chapterList.items.find(item => item.title === chapterName);             
+        //         const subLevelList =  subChapterList.items.find(item => item.title === subChapterName);                
+        //         return  subLevelList.items.find(item => item.title === subLevel);             
+        //     }
+        // }     
     }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

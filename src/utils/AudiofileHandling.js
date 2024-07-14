@@ -43,12 +43,22 @@ export async function getFileCount(folderPath, callback){
     }
 }
 
-export async function getOptionList(module, callback){
+export async function getOptionList(module, folderPath, callback){
     try{
-
-        const response = await fetch(backendIP + `/audio/getOptions?module=${module}`);
+                
+        const levelList = folderPath.split('/')
+        let input = "";
+        console.log(levelList, levelList.length)
+        if(levelList.length==3)
+            input = levelList[levelList.length-1] + "," + levelList[levelList.length-1]
+        else
+            input = levelList[levelList.length-2] + "," + levelList[levelList.length-1]
+        
+        console.log("options-path", input);
+        const response = await fetch(backendIP + `/audio/getOptions?module=${input}`);
         const data = await response.json();
-        console.log("APIData", data);
+        console.log("APIData-options", data);
+                
         callback(data);
     }
     catch(error){

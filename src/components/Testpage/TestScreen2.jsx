@@ -77,7 +77,7 @@ export default function TestScreen2(){
                     // console.log("folderPath", folderPath);
                     await getFileCount(folderPath, (fileCount)=>{
                         // console.log("filecount", fileCount);
-                        setFileNames(pv=>getFilenamesInWords(1,fileCount)); 
+                        setFileNames(pv=>getFilenamesInWords(1,fileCount, true)); 
                         setFileCount(fileCount-1);              
                     })                
                 }        
@@ -95,6 +95,7 @@ export default function TestScreen2(){
         {            
             // console.log("playing");
             async function getAudiofile(){
+                console.log(fileNames[cQ])
                 await getAudio(folderPath + "/" + fileNames[cQ], (data)=>{                  
                     setAudioData(data);
                 })
@@ -174,7 +175,7 @@ export default function TestScreen2(){
           setScore(pv=>pv+response);
           setTotalStimulus(pv=>pv+1);
 
-        //   console.log(cQ, fileCount-1);
+        // console.log(cQ, fileCount-1);
           if(cQ<fileCount-1)
             setCQ(pv=>pv+1);  
           else
@@ -197,6 +198,7 @@ export default function TestScreen2(){
                         <button id="normal" style={{backgroundColor: "#6F61C0"}} onClick={handleSNR}>Normal</button>
                         <button id="hard"style={{backgroundColor: "#6F61C0"}}onClick={handleSNR}>Hard</button>
                         <button id="hardest" style={{backgroundColor: "#6F61C0"}} onClick={handleSNR}>Hardest</button>
+                        {/* <button id="back" style={{backgroundColor: "#6F61C0", width: "50px", marginLeft:"35%"}} onClick={handleExit}>back</button> */}
                     </div>       
                 )
                 break;

@@ -9,7 +9,7 @@ export default function Index(){
                               
     function handleClick(e){           
         e.preventDefault();
-        // console.log("testCode", testData);
+        console.log("Instruction-Page TestData", testData);
         if(testData.testCode < 5)
             navigate('/auditory-testpage')       
         else{

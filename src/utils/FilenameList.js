@@ -1,4 +1,4 @@
-export function getFilenamesInWords(startNumber, endNumber) {
+export function getFilenamesInWords(startNumber, endNumber, isRandomise) {
     const numberWords = [
       'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
       'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'
@@ -25,10 +25,30 @@ export function getFilenamesInWords(startNumber, endNumber) {
       }
     }
   
-    return filenames;
+    console.log("Randomise", isRandomise)
+    
+    if(isRandomise)
+    {      
+      return shuffleArray(filenames);
+    }else
+    {
+      return filenames;
+    }
+    
+
+    
+}
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
   }
+  return array;
+}
     
 export function setFolderNames(pos, folderName, folderArray, updateFolderNames){      
+
       const data = [...folderArray];
       const newArray = [];
 
